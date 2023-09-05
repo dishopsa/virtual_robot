@@ -7,11 +7,14 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class EstelleTest extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
-telemetry.addData("name", "Estelle");
+        telemetry.addData("name", "Estelle");
         telemetry.update();
         waitForStart();
+        int counter = 0;
         while(opModeIsActive()){
-
+            counter++;
+            telemetry.addData("counter", counter);
+            telemetry.update();
         }
     }
 }
